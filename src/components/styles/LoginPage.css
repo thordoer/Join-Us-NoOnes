@@ -10,12 +10,18 @@
   position: relative;
   padding: 0 1rem;
   margin: 0 1rem;
-  min-width: 400px;
+  width: auto;
+  min-width: 430px;
   /* /* margin: 0 auto; */
 }
-/* @media (max-width: 420px) {
-  .welcome-header {
-    /* width: 430px; */
+@media (max-width: 400px) {
+  .login-container {
+    margin: 0 1;
+    padding: 0 0.5rem;
+    min-width: auto;
+    width: 400px;
+  }
+}
 
 .login-wrapper {
   display: flex;
