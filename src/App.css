@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #202020;
+}
+
+.app {
+  min-height: 100vh;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  /* margin-left: 100%; */
+  /* margin-right: 100%; */
+}
+
+.light-theme {
+  --bg-primary: #03452e;
+  --text-primary: #ffffff;
+}
+
+.dark-theme {
+  --bg-primary: #202020;
+  --text-primary: #dfdfdf;
+}

@@ -1,0 +1,529 @@
+.login-container {
+  min-height: 100vh;
+  background-color: var(--color-dark-green);
+  /* background-color: var(--color-white); */
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+  padding: 0 1rem;
+  margin: 0 1rem;
+  width: 430px;
+  /* /* margin: 0 auto; */
+}
+@media (max-width: 420px) {
+  .welcome-header {
+    flex-direction: row;
+  }
+}
+
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  padding-bottom: 4rem;
+}
+
+.login-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.logo-link {
+  height: 66px;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.logo {
+  width: 144px;
+  height: 48px;
+  color: var(--color-green);
+}
+
+.welcome-section {
+  width: 100%;
+  max-width: 430px;
+  background-color: var(--color-white);
+  border: none;
+  border-radius: 0.75rem;
+  background-color: transparent;
+}
+
+.welcome-card {
+  width: 100%;
+  max-width: 430px;
+  background-color: var(--color-white);
+  border-radius: 0.75rem;
+
+  position: relative;
+  border: 2px solidvar(--color-white);
+}
+
+.welcome-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0.75rem;
+  padding: 1px;
+  /* background: linear-gradient(
+    135deg,
+    var(--color-green),
+    var(--color-medium-green)
+  ); */
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.welcome-header {
+  display: flex;
+  border-radius: 0.75rem;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .welcome-header {
+    flex-direction: row;
+  }
+}
+
+.welcome-title {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  color: var(--color-black);
+  color: rgba(245, 245, 245, 0.773);
+}
+
+.social-login {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-button {
+  display: flex;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.social-button svg {
+  color: currentColor;
+  transition: transform 0.2s ease;
+}
+
+.social-button:hover svg {
+  transform: scale(1.05);
+}
+
+.login-form {
+  width: 100%;
+
+  border: none;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  color: var(--color-grey-green);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+}
+
+.input-wrapper {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 0.875rem;
+  background-color: var(--color-light-grey);
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.input-wrapper:focus-within {
+  /* background-color: var(--color-light-grey-hover); */
+  border-radius: 0.5rem;
+}
+
+.form-input {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  height: 2.75rem;
+  color: var(--color-black);
+  color: rgba(245, 245, 245, 0.76);
+  width: 100%;
+
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: var(--color-grey-green-text);
+}
+
+.password-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.password-toggle {
+  background: transparent;
+  border: none;
+  width: auto;
+  height: auto;
+  border-radius: 0.5rem;
+  color: var(--color-black);
+  background-color: #10b981;
+  line-height: normal;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin-left: 0.25rem;
+}
+
+.password-toggle:hover {
+  background: transparent;
+  color: var(--color-black);
+}
+
+.forgot-password {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.25rem;
+}
+
+.forgot-link {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: var(--color-green);
+  /* color: var(--mantine-color-green-0); */
+  color: var(--mantine-color-green);
+  color: #3ebd69;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.submit-button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.submit-button {
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  background-color: var(--mantine-color-green);
+  /* background-color: rgb(80, 206, 80); */
+  color: rgba(0, 0, 0, 0.63);
+  font-weight: 550;
+  position: relative;
+  border: none;
+  height: auto;
+  width: 90%;
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  padding: 12px;
+}
+
+.submit-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0.5rem;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    var(--color-green),
+    var(--color-medium-green)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.submit-button:hover::before {
+  background: linear-gradient(
+    135deg,
+    var(--color-green-hover),
+    var(--color-medium-green)
+  );
+}
+
+.submit-button span {
+  font-weight: 600;
+  color: var(--color-green);
+}
+.signup-section {
+  padding-bottom: 12px;
+}
+.signup-text {
+  text-align: center;
+  color: var(--color-grey-green-text);
+  font-size: 15px;
+  /* margin-bottom: 24px; */
+}
+
+.footer-controls {
+  /* position: absolute; */
+  bottom: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 24px;
+  justify-content: space-between;
+}
+/* .theme-toggle { */
+/* position: absolute; */
+/* width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* padding-top: 1.5rem;  */
+/* font-size: 0.75rem; 
+  line-height: 1rem;
+  color: white;
+  text-decoration: underline;  */
+/* background-color: red; */
+/* } */
+.language-button {
+  display: flex;
+  margin-left: 8rem;
+  padding: 0;
+
+  background: transparent;
+  color: var(--mantine-color-green-0);
+}
+
+.language-text {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+  display: flex;
+  text-decoration: underline;
+  background-color: none;
+  color: #3ebd69;
+}
+
+/* Theme Toggle Container */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 0;
+}
+
+/* Theme Icons */
+.theme-icon {
+  fill: currentColor;
+  color: var(--mantine-color-green); /* Default icon color */
+  transition: color 0.1s ease;
+}
+
+.dark .theme-icon {
+  color: white; /* Icon color in dark mode */
+}
+
+/* Switch Wrapper */
+.switch-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Hide default checkbox */
+.theme-switch {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+/* Switch Label */
+.switch-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 8px;
+}
+
+/* Switch Track */
+.switch-track {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 32px;
+  /* background: linear-gradient(
+    90deg,
+    #3b82f6 0%,
+    #10b981 100%
+  ); Blue to green gradient */
+  border-radius: 8px;
+  /* background: var(--mantine-color-green); */
+  background-color: var(--mantine-color-green);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  background-color: #10b981;
+}
+
+/* Switch Thumb */
+.switch-thumb {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 6px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode styles */
+.dark .switch-track {
+  /* background: linear-gradient(90deg, #1e40af 0%, #047857 100%); */
+  /* background: #10b981; */
+  background-color: #3ebd69;
+}
+
+/* Checked state - Dark mode active */
+.theme-switch:checked + .switch-label .switch-track {
+  /* background: linear-gradient(90deg, #1e3a8a 0%, #065f46 100%); */
+
+  background-color: #3ebd69;
+}
+
+.theme-switch:checked + .switch-label .switch-thumb {
+  transform: translateX(28px);
+}
+
+/* Hover effects */
+.switch-label:hover .switch-track {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.switch-label:hover .switch-thumb {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+/* Active/Click effect */
+.theme-switch:active + .switch-label .switch-thumb {
+  width: 28px; /* Slightly enlarge on click */
+}
+
+.theme-switch:checked:active + .switch-label .switch-thumb {
+  transform: translateX(24px); /* Adjust position when enlarged */
+}
+
+/* Focus styles for accessibility */
+.theme-switch:focus + .switch-label .switch-track {
+  /* outline: 2px solid #3b82f6; */
+  outline-offset: 2px;
+  background-color: #10b981;
+}
+
+/* Disabled state */
+.theme-switch:disabled + .switch-label {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.theme-switch:disabled + .switch-label .switch-track {
+  background: #9ca3af; /* Gray for disabled */
+}
+
+/* Moon/Sun icon in the label */
+.switch-label svg {
+  fill: currentColor;
+  color: #10b981; /* Medium green */
+  /* transition: transform 0.4s ease; */
+}
+
+/* Animate the green icon on toggle */
+.theme-switch:checked + .switch-label svg {
+  transform: rotate(180deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .theme-toggle {
+    gap: 8px;
+    padding: 6px;
+  }
+
+  .switch-track {
+    width: 52px;
+    height: 28px;
+  }
+
+  .switch-thumb {
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+  }
+
+  .theme-switch:checked + .switch-label .switch-thumb {
+    transform: translateX(24px);
+  }
+
+  .theme-icon,
+  .switch-label svg {
+    width: 20px;
+    height: 20px;
+  }
+}

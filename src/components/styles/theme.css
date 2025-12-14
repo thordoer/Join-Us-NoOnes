@@ -1,0 +1,12 @@
+.dark-theme {
+  --color-dark-green: #202020;
+  --color-deep-dark-green: #1a1a1a;
+  --color-light-green: #373737;
+  --color-light-grey: #3f3f3f;
+  --color-grey: #303030;
+  --color-white: #292929;
+  --color-white-text: #dfdfdf;
+  --color-black-text: #dfdfdf;
+  --color-grey-green: #9f9f9f;
+  --color-grey-green-text: #8d8d8d;
+}
