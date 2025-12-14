@@ -177,7 +177,7 @@
 }
 
 .input-wrapper:focus-within {
-  /* background-color: var(--color-light-grey-hover); */
+  background-color: var(--color-light-grey-hover);
   border-radius: 0.5rem;
 }
 
