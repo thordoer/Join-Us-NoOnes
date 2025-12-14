@@ -122,7 +122,10 @@
   color: var(--color-black);
   color: rgba(245, 245, 245, 0.773);
 }
-
+.dark .welcome-title {
+  color: var(--color-black);
+  color: rgba(245, 245, 245, 0.773);
+}
 .social-login {
   display: flex;
   gap: 0.75rem;
