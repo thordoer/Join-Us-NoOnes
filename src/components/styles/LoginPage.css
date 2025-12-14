@@ -4,20 +4,18 @@
   /* background-color: var(--color-white); */
   background-repeat: no-repeat;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   flex-direction: column;
   flex-grow: 1;
   position: relative;
   padding: 0 1rem;
   margin: 0 1rem;
-  width: 400px;
+  min-width: 400px;
   /* /* margin: 0 auto; */
 }
-@media (max-width: 420px) {
+/* @media (max-width: 420px) {
   .welcome-header {
-    width: 430px;
-  }
-}
+    /* width: 430px; */
 
 .login-wrapper {
   display: flex;
