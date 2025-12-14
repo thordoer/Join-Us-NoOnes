@@ -4,7 +4,7 @@ import SvgSprite from "./SvgSprite.jsx";
 const ThemeToggle = ({ theme, toggleTheme }) => {
   return (
     <div className="theme-toggle">
-      {/* <SvgSprite /> */}
+      <SvgSprite />
       <svg width="24" height="24" className="theme-icon">
         <use xlinkHref="#icon-IconLight-f466e4"></use>
       </svg>

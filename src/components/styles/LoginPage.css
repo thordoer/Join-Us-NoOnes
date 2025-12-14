@@ -1,6 +1,6 @@
 .login-container {
   min-height: 100vh;
-  background-color: var(--color-dark-green);
+  /* background-color: var(--color-dark-green); */
   /* background-color: var(--color-white); */
   background-repeat: no-repeat;
   display: flex;
@@ -10,12 +10,12 @@
   position: relative;
   padding: 0 1rem;
   margin: 0 1rem;
-  width: 430px;
+  width: 400px;
   /* /* margin: 0 auto; */
 }
 @media (max-width: 420px) {
   .welcome-header {
-    flex-direction: row;
+    width: 430px;
   }
 }
 
@@ -212,8 +212,9 @@
   width: auto;
   height: auto;
   border-radius: 0.5rem;
-  color: var(--color-black);
-  background-color: #10b981;
+  color: var(--color-white);
+  color: whitesmoke;
+  /* background-color: #10b981; */
   line-height: normal;
   padding: 0.5rem;
   cursor: pointer;
@@ -223,6 +224,10 @@
 .password-toggle:hover {
   background: transparent;
   color: var(--color-black);
+}
+
+.dark .password-toggle {
+  color: black;
 }
 
 .forgot-password {
