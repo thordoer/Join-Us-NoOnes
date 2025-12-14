@@ -4,6 +4,7 @@ import LoginPage from "./components/LoginPage";
 import "./components/styles/variables.css";
 import "./components/styles/theme.css";
 import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -24,7 +25,14 @@ function App() {
 
   return (
     <div className={`app ${theme}-theme`}>
-      <LoginPage theme={theme} toggleTheme={toggleTheme} />
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={<LoginPage theme={theme} toggleTheme={toggleTheme} />}
+          />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
